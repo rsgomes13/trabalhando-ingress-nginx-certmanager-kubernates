@@ -1,17 +1,17 @@
 # trabalhando-ingress-nginx-certmanager-kubernates
 
---aplicação
+## aplicação
 kubectl apply -f app1.yaml
 kubectl apply -f app2.yaml
 kubectl apply -f app3.yaml
 
---ingress-nginx
+## ingress-nginx
 kubectl create namespace ingress-nginx
 helm install ingress-nginx ingress-nginx/ingress-nginx
 kubectl apply -f ingress-wildcard-host.yaml
 
 
---cert-manager
+## cert-manager
 helm install \
   cert-manager jetstack/cert-manager \
   --namespace cert-manager \
